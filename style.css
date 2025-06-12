@@ -78,9 +78,9 @@ body {
 
 .pan-image {
     position: absolute;
-    bottom: -25%; /* Adjusted from -20% */
-    left: -15%; /* Adjusted from -12% */
-    height: 150%; /* Adjusted from 140% */
+    bottom: -15%; /* Adjusted from -25% */
+    left: -10%; /* Adjusted from -15% */
+    height: 120%; /* Adjusted from 150% */
     object-fit: contain;
     z-index: 2;
     width: auto;
