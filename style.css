@@ -1,3 +1,8 @@
+/* Universal box-sizing */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -21,8 +26,10 @@ body {
     background-image: url('Card_BG.png');
     background-size: cover;
     background-position: center;
-    width: 800px; /* Adjust as needed */
-    height: 600px; /* Adjust as needed */
+    width: 95%; /* Adjusted for a slightly wider card */
+    max-width: 950px; /* Increased max-width */
+    height: 85vh; /* Adjusted for a slightly taller card */
+    max-height: 750px; /* Increased max-height */
     border-radius: 20px;
     position: relative;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -45,79 +52,98 @@ body {
 
 .main-title {
     position: absolute;
-    top: 30px; /* Adjust as needed */
+    top: 3%; /* Adjusted from 5% */
     left: 50%;
     transform: translateX(-50%);
-    width: 650px; /* Adjust as needed */
+    width: 85%; /* Adjusted from 80% */
+    max-width: 750px; /* Increased max-width */
 }
 
 .claim-button {
     position: absolute;
-    top: 120px; /* Adjust as needed */
+    top: 15%; /* Adjusted from 20% */
     left: 50%;
     transform: translateX(-50%);
-    width: 350px; /* Adjust as needed */
+    width: 50%; /* Adjusted from 45% */
+    max-width: 400px; /* Increased max-width */
+    height: 80px; /* Adjusted fixed height */
+    background-image: url('Tu_Bono_Boton.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
 .pan-image {
     position: absolute;
-    bottom: -150px; /* Adjust to move down */
-    left: -100px; /* Adjust to move further left */
-    height: 120%; /* Make it taller than the card */
+    bottom: -25%; /* Adjusted from -20% */
+    left: -15%; /* Adjusted from -12% */
+    height: 150%; /* Adjusted from 140% */
     object-fit: contain;
-    z-index: 2; /* Ensure it's below the coins */
+    z-index: 2;
+    width: auto;
 }
 
 .get-spins-button {
     position: absolute;
-    top: 250px; /* Adjust as needed */
-    right: 30px; /* Adjust as needed */
-    width: 280px; /* Adjust as needed */
-    z-index: 10; /* Ensure it's above other elements if necessary */
+    top: 35%; /* Adjusted from 40% */
+    right: 5%; /* Adjusted from 4% */
+    width: 30%; /* Adjusted from 35% */
+    max-width: 250px; /* Adjusted max-width */
+    height: 50px; /* Adjusted fixed height */
+    background-image: url('Boton Giros Gratis.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
 }
 
 .steps {
     position: absolute;
-    top: 320px; /* Adjust as needed */
-    right: 30px; /* Adjust as needed */
+    top: 45%; /* Adjusted from 52% */
+    right: 5%; /* Adjusted from 4% */
     text-align: left;
-    color: white; /* Adjust text color */
+    color: white;
     font-size: 1.2em;
     font-weight: bold;
+    width: 30%; /* Adjusted from 35% */
+    max-width: 250px;
 }
 
 .step-text {
-    margin-bottom: 10px;
-    color: #00d970; /* Green color from image */
-}
-
-.step-image {
-    display: block;
-    margin-bottom: 10px; /* Space between images */
-    width: 280px; /* Adjust as needed */
+    margin-bottom: 5px; /* Adjusted margin */
+    color: #00d970;
+    font-size: 1.1em; /* Adjusted font size */
 }
 
 .coins-left {
     position: absolute;
-    top: 100px; /* Adjust as needed */
-    left: 0px; /* Adjust as needed */
-    height: 300px; /* Adjust as needed */
+    top: 10%; /* Adjusted from 15% */
+    left: -2%; /* Adjusted from 0px */
+    height: 45%; /* Adjusted from 50% */
     object-fit: contain;
     z-index: 5;
+    transition: transform 0.1s ease-out;
 }
 
 .coins-right {
     position: absolute;
-    top: 200px; /* Adjust as needed */
-    right: 0px; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
+    top: 25%; /* Adjusted from 30% */
+    right: -2%; /* Adjusted from 0px */
+    height: 30%; /* Adjusted from 35% */
     object-fit: contain;
     z-index: 5;
+    transition: transform 0.1s ease-out;
 }
 
 .icons-bottom {
     position: absolute;
-    bottom: 20px;
+    bottom: 2%; /* Adjusted from 20px to percentage */
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -129,29 +155,29 @@ body {
 .icon-item {
     text-align: center;
     color: white;
-    font-size: 0.8em;
+    font-size: 0.7em; /* Adjusted font size */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .icon-item img {
-    width: 40px; /* Adjust as needed */
-    margin-bottom: 5px;
+    width: 35px; /* Adjusted from 40px */
+    margin-bottom: 3px; /* Adjusted margin */
 }
 
 .social-icons {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px; /* Adjusted from 20px */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 20px; /* Space between icons */
+    gap: 15px; /* Adjusted from 20px */
     z-index: 20;
 }
 
 .social-icon {
-    width: 30px; /* Adjust as needed */
-    height: 30px; /* Adjust as needed */
+    width: 25px; /* Adjusted from 30px */
+    height: 25px; /* Adjusted from 30px */
     cursor: pointer;
 } 
