@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('BGLandPage.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main-card {
+    background-image: url('Card_BG.png');
+    background-size: cover;
+    background-position: center;
+    width: 800px; /* Adjust as needed */
+    height: 600px; /* Adjust as needed */
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Ensure content stays within bounds */
+}
+
+.main-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('SquareBG.png');
+    background-repeat: repeat;
+    background-size: 20px; /* Adjust size of the pattern as needed */
+    opacity: 0.1; /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+.main-title {
+    position: absolute;
+    top: 30px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px; /* Adjust as needed */
+}
+
+.claim-button {
+    position: absolute;
+    top: 120px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px; /* Adjust as needed */
+}
+
+.pan-image {
+    position: absolute;
+    bottom: -150px; /* Adjust to move down */
+    left: -100px; /* Adjust to move further left */
+    height: 120%; /* Make it taller than the card */
+    object-fit: contain;
+    z-index: 2; /* Ensure it's below the coins */
+}
+
+.get-spins-button {
+    position: absolute;
+    top: 250px; /* Adjust as needed */
+    right: 30px; /* Adjust as needed */
+    width: 280px; /* Adjust as needed */
+    z-index: 10; /* Ensure it's above other elements if necessary */
+}
+
+.steps {
+    position: absolute;
+    top: 320px; /* Adjust as needed */
+    right: 30px; /* Adjust as needed */
+    text-align: left;
+    color: white; /* Adjust text color */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.step-text {
+    margin-bottom: 10px;
+    color: #00d970; /* Green color from image */
+}
+
+.step-image {
+    display: block;
+    margin-bottom: 10px; /* Space between images */
+    width: 280px; /* Adjust as needed */
+}
+
+.coins-left {
+    position: absolute;
+    top: 100px; /* Adjust as needed */
+    left: 0px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    object-fit: contain;
+    z-index: 5;
+}
+
+.coins-right {
+    position: absolute;
+    top: 200px; /* Adjust as needed */
+    right: 0px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    object-fit: contain;
+    z-index: 5;
+}
+
+.icons-bottom {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.icon-item {
+    text-align: center;
+    color: white;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-item img {
+    width: 40px; /* Adjust as needed */
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px; /* Space between icons */
+    z-index: 20;
+}
+
+.social-icon {
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    cursor: pointer;
+} 
