@@ -45,7 +45,17 @@ body {
     background-repeat: repeat;
     background-size: 20px; /* Adjust size of the pattern as needed */
     opacity: 0.1; /* Adjust opacity as needed */
-    z-index: 7; /* Adjusted to be above the man */
+    z-index: 7; /* Overlay */
+}
+
+.casino-table-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 4; /* Casino Table */
 }
 
 .main-title {
@@ -54,6 +64,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 600px; /* Precise adjustment */
+    z-index: 9; /* Ensuring main title is above everything but social icons */
 }
 
 .claim-button {
@@ -75,13 +86,14 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 9; /* Ensuring claim button is above everything but social icons */
 }
 
 .pan-image {
     position: absolute;
-    bottom: 0px; /* Aligned with the bottom of the card */
-    left: -200px; /* Adjusted to keep him on the left, but not too far */
-    height: 500px; /* Significantly reduced height to pull arm in and clear icon */
+    bottom: 80px;
+    left: -350px;
+    height: 480px;
     object-fit: contain;
     z-index: 6;
     width: auto;
@@ -105,7 +117,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: 10;
+    z-index: 9; /* Ensuring get spins button is above everything but social icons */
 }
 
 .steps {
@@ -117,12 +129,21 @@ body {
     font-size: 1.2em;
     font-weight: bold;
     width: 250px;
+    z-index: 9; /* Ensuring steps are above everything but social icons */
 }
 
 .step-text {
     margin-bottom: 10px;
-    color: #00d970;
+    color: white;
     font-size: 1.2em;
+    font-weight: bold;
+}
+
+.step-number {
+    color: #00d970; /* Bright teal for numbers */
+    font-size: 1.5em; /* Make numbers larger */
+    font-weight: bold;
+    margin-right: 5px;
 }
 
 .step-image {
@@ -137,7 +158,7 @@ body {
     left: 0px;
     height: 300px;
     object-fit: contain;
-    z-index: 5;
+    z-index: 5; /* Coins */
     transition: transform 0.1s ease-out;
 }
 
@@ -147,7 +168,7 @@ body {
     right: 0px;
     height: 200px;
     object-fit: contain;
-    z-index: 5;
+    z-index: 5; /* Coins */
     transition: transform 0.1s ease-out;
 }
 
@@ -158,9 +179,30 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 80px; /* Significantly increased padding to shift icons further right */
     box-sizing: border-box;
-    z-index: 8;
+    z-index: 8; /* Icons */
+}
+
+.icon-item {
+    background-color: #1a423a; /* Dark green tile */
+    border: 2px solid #00d970; /* Glowing edge (teal) */
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: #00d970; /* Neon green/teal text */
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.icon-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 .social-icons {
@@ -170,5 +212,5 @@ body {
     transform: translateX(-50%);
     display: flex;
     gap: 20px;
-    z-index: 20;
+    z-index: 20; /* Highest z-index for social icons */
 } 
