@@ -50,10 +50,10 @@ body {
 
 .main-title {
     position: absolute;
-    top: 50px;
+    top: 50px; /* Precise adjustment based on original image */
     left: 50%;
     transform: translateX(-50%);
-    width: 600px;
+    width: 600px; /* Precise adjustment */
 }
 
 .claim-button {
@@ -63,13 +63,18 @@ body {
     transform: translateX(-50%);
     width: 300px;
     height: 70px;
-    background-image: url('Tu_Bono_Boton.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #fddb00; /* Yellow color from image */
+    color: #000; /* Black text color */
+    font-size: 1.5em; /* Adjust font size */
+    font-weight: bold;
     border: none;
+    border-radius: 10px; /* Rounded corners */
     cursor: pointer;
-    padding: 0;
+    padding: 0 20px; /* Add horizontal padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .pan-image {
@@ -88,13 +93,18 @@ body {
     right: 50px;
     width: 250px;
     height: 60px;
-    background-image: url('Boton Giros Gratis.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #00d970; /* Green color from image */
+    color: #fff; /* White text color */
+    font-size: 1.2em; /* Adjust font size */
+    font-weight: bold;
     border: none;
+    border-radius: 10px; /* Rounded corners */
     cursor: pointer;
-    padding: 0;
+    padding: 0 15px; /* Add horizontal padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     z-index: 10;
 }
 
@@ -150,20 +160,7 @@ body {
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
-}
-
-.icon-item {
-    text-align: center;
-    color: white;
-    font-size: 0.8em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.icon-item img {
-    width: 40px;
-    margin-bottom: 5px;
+    z-index: 7;
 }
 
 .social-icons {
@@ -174,10 +171,4 @@ body {
     display: flex;
     gap: 20px;
     z-index: 20;
-}
-
-.social-icon {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
 } 
