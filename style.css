@@ -45,7 +45,7 @@ body {
     background-repeat: repeat;
     background-size: 20px; /* Adjust size of the pattern as needed */
     opacity: 0.1; /* Adjust opacity as needed */
-    z-index: 1;
+    z-index: 7; /* Adjusted to be above the man */
 }
 
 .main-title {
@@ -79,9 +79,9 @@ body {
 
 .pan-image {
     position: absolute;
-    bottom: -15px;
-    left: -80px;
-    height: 650px;
+    bottom: 0px; /* Aligned with the bottom of the card */
+    left: -200px; /* Adjusted to keep him on the left, but not too far */
+    height: 500px; /* Significantly reduced height to pull arm in and clear icon */
     object-fit: contain;
     z-index: 6;
     width: auto;
@@ -153,14 +153,14 @@ body {
 
 .icons-bottom {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 40px;
     box-sizing: border-box;
-    z-index: 7;
+    z-index: 8;
 }
 
 .social-icons {
